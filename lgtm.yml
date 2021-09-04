@@ -1,8 +1,0 @@
-path_classifiers:
-  test:
-    - test
-    - benchmark
-    - exclude: catch
-  docs:
-    - README.md
-    - LICENSE

@@ -1,5 +1,7 @@
-# croncpp
+# cronpp for Arduino
+This library is a fork from [mariusbancila/croncpp](https://github.com/mariusbancila/croncpp) for use in Arduino. I tested it in ESP32 and I don't know it could work on other MCU or not. Please contact me if you tested it on othe MCUs.
 
+# croncpp
 croncpp is a C++11/14/17 header-only cross-platform library for handling CRON expressions. It implements two basic operations: parsing an expression and computing the next occurence of the scheduled time.
 
 [![Build Status](https://travis-ci.org/mariusbancila/croncpp.svg?branch=master)](https://travis-ci.org/mariusbancila/croncpp)
