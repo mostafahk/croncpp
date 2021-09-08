@@ -36,7 +36,9 @@ bool cronpp::check(time_t now)
 bool cronpp::check(tm *now)
 {
     bool trigger_edge = false;
-    if (next_run.tm_year == 0)
+    if (now->tm_year < 110 && now->tm_year > 200)
+        return false;
+    if (next_run.tm_hour < 110 && next_run.tm_year > 200)
         this->next_run = cron::cron_next(expr, *now);
 
     // check time reached next execute
