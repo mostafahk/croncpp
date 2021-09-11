@@ -17,7 +17,8 @@ void cronpp::make(String expresion)
 
 void cronpp::make(const char *expresion)
 {
-    this->expr = cron::make_cron(expresion);
+    if (strlen(expresion) >= 5)
+        this->expr = cron::make_cron(expresion);
 
     //this->next = cron::cron_next(expr, now);
 }
