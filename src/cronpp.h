@@ -8,6 +8,7 @@ class cronpp
 {
 private:
         int comparetime(time_t time1, time_t time2);
+        bool made;
 
 public:
     cron::cronexpr expr;
