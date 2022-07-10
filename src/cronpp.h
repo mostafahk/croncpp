@@ -19,8 +19,8 @@ public:
 
     cronpp(/* args */);
     ~cronpp();
-    void make(String expresion);
-    void make(const char *expresion);
+    bool make(String expresion);
+    bool make(const char *expresion);
     bool check(tm *now);
     bool check(time_t now);
 };
