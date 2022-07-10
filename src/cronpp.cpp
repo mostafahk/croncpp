@@ -38,6 +38,8 @@ int cronpp::comparetime(time_t time1, time_t time2)
 
 bool cronpp::check(time_t now)
 {
+    if (!made)
+        return false;
     tm val;
     return check(cron::utils::time_to_tm(&now, &val));
 }
@@ -56,10 +58,10 @@ bool cronpp::check(tm *now)
     {
         if (!triggered)
         {
-            this->next_run = cron::cron_next(expr, *now);
             this->triggered = true;
             trigger_edge = true;
         }
+        this->next_run = cron::cron_next(expr, *now);
     }
     else
     {
